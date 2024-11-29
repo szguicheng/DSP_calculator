@@ -1,8 +1,11 @@
 from PIL import Image
 import json
 import os
+from src.joinpath import joinpath as jp
+
+
 def get_image_name():
-    with open('src/data/item.json','r') as f:
+    with open(jp('src/data/item.json'),'r' , encoding='utf-8') as f:
         data = json.load(f)
     return data
 
@@ -25,7 +28,7 @@ def split_image(image_path, rows, cols):
             right = (col + 1) * tile_width
             lower = (row + 1) * tile_height
             i+=1
-            output_dir = f"{os.path.basename(data[i]["iconPath"])}"
+            output_dir = f"{jp(data[i]["iconPath"])}"
             tile_name = f"{data[i]["iconPath"].split('/')[-1]}.png"
             # 裁剪子图片
             tile = image.crop((left, upper, right, lower))
@@ -35,7 +38,7 @@ def split_image(image_path, rows, cols):
             tile.save(tile_path, "PNG")
 
 # 示例使用
-image_path = "resources/Item_pic.webp"
+image_path = jp('resources\Item_pic.webp')
 rows = 14  # 分割成4行
 cols = 14  # 分割成4列
 

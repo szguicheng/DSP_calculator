@@ -31,6 +31,8 @@ project_name/
 - tests/: 包含单元测试，使用工具如pytest进行测试。
 - src/: 主代码目录，包含逻辑、UI、数据模型等模块，分层设计便于扩展。
 - resources/: 存放静态资源，例如图标、样式等，统一管理以便替换。
+- 使用 Sphinx 风格的注释：使用 :param、:type、:return、:rtype 和 :raises 等标签来描述参数、返回值和异常。
+- 使用 .. attention:: 提示语句：在文档字符串中使用 .. attention:: 提示语句来添加注意事项。
 
 # 项目命名规范
 

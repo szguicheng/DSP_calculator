@@ -10,5 +10,5 @@ items：原料（参考``item``）
 itemsCounts：数量
 results：产物（参考``item``）
 resultCounts：数量
-timeSpend：时间（秒*60）（生产60个需要多少秒）
+timeSpend：时间（秒/60 item）（生产60个需要多少秒）（除以60就是生产一个需要多少秒）
 type：制造方式{'PARTICLE', 'CHEMICAL', 'ASSEMBLE', 'SMELT', 'FRACTIONATE', 'RESEARCH', 'REFINE'}
